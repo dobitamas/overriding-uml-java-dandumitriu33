@@ -3,17 +3,17 @@ package com.codecool.uml.overriding;
 public class Webshop {
 
     public static void main(String[] args) {
-        System.out.println("<<< TESTING SHOPPING >>>");
-        System.out.println("Simulating customer browsing and adding items to cart.");
-        Order newOrder = new Order();
-        System.out.println("Order status: " + newOrder.getStatus());
-        System.out.println("<<< TESTING CHECKOUT >>>");
-        CheckoutProcess newCheckout = new CheckoutProcess();
-        newCheckout.process(newOrder);
-        System.out.println("Order status: " + newOrder.getStatus());
-        System.out.println("<<< TESTING PAYMENT >>>");
-        PaymentProcess newPayment = new PaymentProcess();
-        newPayment.process(newOrder);
-        System.out.println("Order status: " + newOrder.getStatus());
+        System.out.println("--- SHOP TESTING PHASE ---");
+        System.out.println("Chosing items and adding to cart");
+        Order testOrder = new Order();
+        System.out.println("Order status: " + testOrder.getStatus());
+        System.out.println("--- CHECKOUT TESTING PHASE ---");
+        CheckoutProcess testCheckout = new CheckoutProcess();
+        testCheckout.process(testOrder);
+        System.out.println("Order status: " + testOrder.getStatus());
+        System.out.println("--- PAYMENT TESTING PHASE ---");
+        PaymentProcess testPayment = new PaymentProcess();
+        testPayment.process(testOrder);
+        System.out.println("Order status: " + testOrder.getStatus());
     }
 }

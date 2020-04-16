@@ -8,14 +8,12 @@ public abstract class AbstractProcess {
     }
 
     public void stepBefore() {
-
+        System.out.println("STEP BEFORE: Simulation of order started");
     }
 
-    protected void action(Orderable item) {
-
-    }
+    protected abstract void action(Orderable item);
 
     public void stepAfter() {
-
+        System.out.println("STEP AFTER: Simulation of order in step after phase");
     }
 }
